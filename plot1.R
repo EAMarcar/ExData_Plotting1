@@ -1,3 +1,6 @@
+## Exploratory Data Analysis - Class Project 1 
+## Jun 4, 2015
+
 ## plot1
 
 ## Read the data file
@@ -7,7 +10,7 @@ all_pow <- read.table("household_power_consumption.txt", header=TRUE, sep = ";",
 ## convert Date and Time to a single dat/time variable in proper format
 
 
-## Subset the file for only 2007-02-01 and 2007-0202
+## Subset the file for only 2007-02-01 and 2007-02-02
 
 all_pow$F_Date <- as.character(dmy(all_pow$Date))
 
@@ -28,10 +31,6 @@ power$Voltage <- as.numeric(power$Voltage)
 power$dt2 <- as.POSIXlt(power$DateTime)
 
 
-## write out the subset so future plots can be built from it
-
-write.table(power, file = "power.txt", row.names=FALSE, col.names=TRUE)
-
 ## Open the graphics device where the plot will be sent
 
 png(file = "plot1.png", width = 480, height = 480, type = c("windows")) 
@@ -42,7 +41,8 @@ png(file = "plot1.png", width = 480, height = 480, type = c("windows"))
 hist(power$Global_active_power, col = "red", main = "Global Active Power",
      ylim = range(0 , 1200), 
      xlab = "Global Active Power(kilowatts)")
-
+      ## sign the plot (to know it's original with me)
+      mtext("<EAM>", side=1, line=4, font=4, adj=1, cex=.75)  
 
 dev.off()
 

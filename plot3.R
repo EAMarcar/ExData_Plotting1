@@ -1,4 +1,7 @@
-## plot2
+## Exploratory Data Analysis - Class Project 1 
+## Jun 4, 2015
+
+## Plot3
 
 ## Read the data file
 
@@ -7,7 +10,7 @@ all_pow <- read.table("household_power_consumption.txt", header=TRUE, sep = ";",
 ## convert Date and Time to a single dat/time variable in proper format
 
 
-## Subset the file for only 2007-02-01 and 2007-0202
+## Subset the file for only 2007-02-01 and 2007-02-02
 
 all_pow$F_Date <- as.character(dmy(all_pow$Date))
 
@@ -38,7 +41,8 @@ points(power$dt2, power$Sub_metering_1,type="l")
 points(power$dt2, power$Sub_metering_2, col="red", type="l")
 points(power$dt2, power$Sub_metering_3, col="blue", type = "l")
 legend("topright", c("Sub_metering_1","sub_metering_2", "Sub_metering_3"), col= c("black", "red", "blue"),lwd=2)
-
+## sign the plot (to know it's original with me)
+mtext("<EAM>", side=1, line=4, font=4, adj=1, cex=.75) 
 
 dev.off()
 

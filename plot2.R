@@ -1,5 +1,7 @@
-## plot2
+## Exploratory Data Analysis - Class Project 1 
+## Jun 4, 2015
 
+## plot2
 
 
 ## Read the data file
@@ -9,7 +11,7 @@ all_pow <- read.table("household_power_consumption.txt", header=TRUE, sep = ";",
 ## convert Date and Time to a single dat/time variable in proper format
 
 
-## Subset the file for only 2007-02-01 and 2007-0202
+## Subset the file for only 2007-02-01 and 2007-02-02
 
 all_pow$F_Date <- as.character(dmy(all_pow$Date))
 
@@ -39,7 +41,8 @@ png(file = "plot2.png", width = 480, height = 480, type = c("windows"))
 plot(power$dt2, power$Global_active_power, type = "l", main = "", 
      ylab = "Global Active Power (kilowatts)", xlab = " ")
 
-
+      ## sign the plot (to know it's original with me)
+      mtext("<EAM>", side=1, line=4, font=4, adj=1, cex=.75) 
 
 dev.off()
 
