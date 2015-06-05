@@ -41,8 +41,7 @@ points(power$dt2, power$Sub_metering_1,type="l")
 points(power$dt2, power$Sub_metering_2, col="red", type="l")
 points(power$dt2, power$Sub_metering_3, col="blue", type = "l")
 legend("topright", c("Sub_metering_1","sub_metering_2", "Sub_metering_3"), col= c("black", "red", "blue"),lwd=2)
-## sign the plot (to know it's original with me)
-mtext("<EAM>", side=1, line=4, font=4, adj=1, cex=.75) 
+
 
 dev.off()
 

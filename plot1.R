@@ -41,8 +41,7 @@ png(file = "plot1.png", width = 480, height = 480, type = c("windows"))
 hist(power$Global_active_power, col = "red", main = "Global Active Power",
      ylim = range(0 , 1200), 
      xlab = "Global Active Power(kilowatts)")
-      ## sign the plot (to know it's original with me)
-      mtext("<EAM>", side=1, line=4, font=4, adj=1, cex=.75)  
+       
 
 dev.off()
 

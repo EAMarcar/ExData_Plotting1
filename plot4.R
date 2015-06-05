@@ -56,15 +56,14 @@ plot(power$dt2, power$Sub_metering_1, type = "n", main = "", ylab = "Energy sub 
 points(power$dt2, power$Sub_metering_1,type="l")
 points(power$dt2, power$Sub_metering_2, col="red", type="l")
 points(power$dt2, power$Sub_metering_3, col="blue", type = "l")
-legend("topright", c("Sub_metering_1","sub_metering_2", "Sub_metering_3"), col= c("black", "red", "blue"),lwd=2)
+legend("topright", c("Sub_metering_1","sub_metering_2", "Sub_metering_3"), 
+       col= c("black", "red", "blue"),lwd=2, bty="n")
 
 ## Bottom right
 
 plot(power$dt2, power$Global_reactive_power, type = "l", main = "", 
      ylab= "Global_reactive_power", xlab = "datetime ")
 
-## sign the plot (to know it's original with me)
-mtext("<EAM>", side=1, line=3, font=4, adj=1, cex=.75) 
 
 dev.off()
 
